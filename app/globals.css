@@ -1,0 +1,28 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --font-playfair-display: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--font-playfair-display);
+}
+
+.MBG {
+  background-color: #E6C7A8;
+  background-size: cover;
+}
+
+.full-screen-image {
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+  background-image: url('/intro.jpg');
+  width: 100%;
+  min-height: 400vh;   
+  margin: 0;
+  padding: 0;
+}
