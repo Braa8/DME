@@ -1,14 +1,15 @@
-import { Playfair_Display } from "next/font/google";
+import { Old_Standard_TT } from "next/font/google";
 import './globals.css';
 
-const playfairDisplay = Playfair_Display({
+
+const Old_standard_TT = Old_Standard_TT({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800', '900'], // ملاحظة: بعض الأوزان قد لا تكون متوفرة
-  variable: '--font-playfair-display',
+  weight: ['400', '700',], // ملاحظة: بعض الأوزان قد لا تكون متوفرة
+  variable: '--font-oleo-script',
   display: 'swap', // ⭐ إضافة مهمة لتحسين الأداء
-  // preload: true, // ⭐ اختياري - مفيد إذا كان الخط أساسياً
-  // adjustFontFallback: true, // ⭐ لتحسين الخطوط الاحتياطية
-});
+   preload: true, // ⭐ اختياري - مفيد إذا كان الخط أساسياً
+   adjustFontFallback: false, 
+})
 
 export const metadata = {
   title: "DME",
@@ -17,7 +18,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${playfairDisplay.variable} ${playfairDisplay.className}`}>
+    <html lang="en" className={`${Old_standard_TT.variable} ${Old_standard_TT.className}`}>
       {/* ⭐ استخدم المتغير والكلاس معاً للمرونة */}
       <body className="antialiased">
         {children}
